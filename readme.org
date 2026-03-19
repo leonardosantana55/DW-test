@@ -1,0 +1,6 @@
+* DW test
+this is a project for building a dw using postgress.
+i will start with a csv file, and latter test with api calls.
+i also plan to use some scheduler or orchestrator tool.
+My first objetive is to insert a table programmaticaly on this
+database and do transformations on it for denormalization.
