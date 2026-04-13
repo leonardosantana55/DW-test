@@ -152,7 +152,7 @@ EXCEPTION WHEN OTHERS THEN
 END $$;
 
 CREATE TABLE IF NOT EXISTS dim_lead(
-       sk_lead      INT             GENERATED ALWAYS AS IDENTITY,
+       sk_lead      INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
        id           VARCHAR         NOT NULL,
        name         VARCHAR,
        city         VARCHAR,
