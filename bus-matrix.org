@@ -1,0 +1,10 @@
+#+ATTR_HTML: :colgroup (left center center center center center )
+
+* bus matrix for the marketing department of a energy comercialization company
+| facts                       | dim_date | dim_local | dim_campaign | dim_source_medium | dim_customer | dim_salespeople | dim_contract |
+|-----------------------------+----------+-----------+--------------+-------------------+--------------+-----------------+--------------|
+| fact_advertising            | x        | x         | x            | x                 |              |                 |              |
+| fact_website_events         | x        | x         | x            | x                 | x            |                 |              |
+| fact_funil_events           | x        | x         | x            | x                 | x            | x               |              |
+| fact_salespeople_activities | x        | x         | x            | x                 | x            | x               |              |
+| fact_deals                  | x        | x         | x            | x                 | x            | x               | x            |

@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE update_dim(
        destination_table text, 
-       origin_table text,
+       staging_table text,
        key_column text,
        concomitant_columns text[],
        scdt1_columns text[],
@@ -59,7 +59,7 @@ EXECUTE format('
     dim_columns,
     staging_columns,
 
-    origin_table,
+    staging_table,
     destination_table,
 
     key_column,
@@ -79,7 +79,7 @@ EXECUTE format('
         AND %s;',
     destination_table,
     scdt1_set,
-    origin_table,
+    staging_table,
 
     key_column,
     key_column,
@@ -101,7 +101,7 @@ EXECUTE format('
         AND d.is_current = TRUE
         AND %s;',
     destination_table,
-    origin_table,
+    staging_table,
 
     key_column,
     key_column,
@@ -133,7 +133,7 @@ EXECUTE format('
     
     staging_columns,
 
-    origin_table,
+    staging_table,
     destination_table,
 
     key_column,
@@ -170,6 +170,7 @@ DECLARE
     staging_columns TEXT;
 
 BEGIN
+
 --------------------------------------------------------------------------------
                               --VARIABLE DEFINITION--
 --------------------------------------------------------------------------------
