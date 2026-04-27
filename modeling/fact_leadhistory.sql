@@ -1,3 +1,6 @@
+-- fact tables should be partitioned on the date column so they become
+-- less computationaly expensive to query
+
 CREATE TABLE IF NOT EXISTS fact_leadhistory(
        sk_lead             INT         NOT NULL REFERENCES dim_lead(sk_lead),
        createdbyid         VARCHAR     NOT NULL,
